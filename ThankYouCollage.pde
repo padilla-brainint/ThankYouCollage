@@ -1,132 +1,85 @@
-PImage thanks;
-PImage tophand;
-PImage bottomhand;
-
-
 void setup(){
-  size(600,600);
-  thanks = loadImage("thanks.jpg");
-  tophand = loadImage("tophand.png");
-  bottomhand = loadImage("bottomhand.png");
+size(800,800);
+background(232,229,202);
 
+line(400,100,350,40);
+line(500,100,550,40);
+
+fill(232,123,7);
+rect(250,100,500,500);
+
+fill(227,231,234);
+rect(270,120,460,460);
+
+fill(250,141,8);
+quad(250,100,100,100,100,600,250,600);
+
+fill(21,20,19);
+rect(120,120,130,460);
+
+fill(175,165,165);
+ellipse(155,170,50,50);
+ellipse(215,170,50,50);
+ellipse(155,250,50,50);
+ellipse(215,250,50,50);
+
+
+fill(203,149,227);
+rect(130,300,100,70,20);
+rect(130,400,100,70,20);
+
+
+fill(223,222,224);
+rect(270,120,460,460);
+
+fill(0);
+rect(270,120,460,460);
+
+fill(245,22,37);//color of text
+textAlign(450,450);//pos.of text
+textSize(50);//size.of text
+text("for all my friend",400,700);
+//(text,x,y)
+   
 }
+
+ 
+
 
 void draw(){
-  background(255);
+  if(mousePressed){
+    fill(255);
+    rect(270,120,460,460);
+    
+        fill(0,230,182);
+    ellipse(400,300,200,200);
+ellipse(550,450,200,200);
+ellipse(370,500,150,150);
+ellipse(630,280,150,150);
 
-// still hand at bottom
+fill(22,45,242);
+ellipse(370,500,75,75);
+ellipse(450,300,80,80);
 
-if(mouseY>420)
-{  
-  noStroke();
-  
-  //orange 
-    fill(#FFC903,100);
-    ellipse(320,420,80,80);
-    ellipse(380,220,140,140);
 
-    
-    //teal
-    fill(#02B4C6,100);
-    arc(500,200,160,160,radians(90),radians(270));
-    ellipse(200,200,50,50);
-    ellipse(420,280,80,80);
-    ellipse(240,420,140,140);
-    
-    //sage
-    fill(#B7E5C2,100);
-    ellipse(360,370,15,15);
-    ellipse(300,180,100,100);
-    
-  
-  fill(#FFF80D);
-  rect(80,500,15,500);
-  image(tophand,0,420);
+fill(21,232,79);//color of text
+textAlign(450,450);//pos.of text
+textSize(50);//size.of text
+text("thank",500,350);
+//(text,x,y);
 
-} 
-  //moving top hand
-else if(mouseY>50)
-  {
-    noStroke();
-    //orange 
-    fill(#FFC903,100);
-    ellipse(320,420,80,80);
-    ellipse(380,220,140,140);
+fill(226,242,17);//color of text
+textAlign(450,450);//pos.of text
+textSize(50);//size.of text
+text("you",550,400);
+//(text,x,y)
 
-    
-    //teal
-    fill(#02B4C6,100);
-    arc(500,200,160,160,radians(90),radians(270));
-    ellipse(200,200,50,50);
-    ellipse(420,280,80,80);
-    ellipse(240,420,140,140);
-    
-    //sage
-    fill(#B7E5C2,100);
-    ellipse(360,370,15,15);
-    ellipse(300,180,100,100);
-  
-  noStroke();
-  fill(#FFF80D);
-  rect(80,mouseY+60,15,500);
-  image(tophand,0,mouseY);  
-}
-// still hand at top with message
-else if(mouseY<50)
-  {
-   noStroke();
-   frameRate(5);
-  
-   image(thanks,160,200,width/2,height/2.5);
-  
-  //orange 
-    fill(#FFC903,random(100));
-    ellipse(320,420,80,80);
-    ellipse(380,220,140,140);
 
-    
-    //teal
-    fill(#02B4C6,random(100));
-    arc(500,200,160,160,radians(90),radians(270));
-    ellipse(200,200,50,50);
-    ellipse(420,280,80,80);
-    ellipse(240,420,140,140);
-    
-    //sage
-    fill(#B7E5C2,random(100));
-    ellipse(360,370,15,15);
-    ellipse(300,180,100,100);
-   
-   
-  fill(#FFF80D);
-  rect(80,mouseY+60,15,500);
-  image(tophand,0,20);  
+  }else{
+     fill(255);
+    ellipse(180,530,70,70);
   
-  noFill();
-  stroke(0);
-  strokeWeight(1);
-  rect(400,520,140,60);
   fill(0);
-  textSize(14);
-  text("For all you do",425,555);
-  ellipse(410,530,2,2);
-  ellipse(530,530,2,2);
-  ellipse(530,570,2,2);
-  ellipse(410,570,2,2);
-  }  
-
-
-
-
- //artwork frame
-  noFill();
-  strokeWeight(20);
-  stroke(0);
-  rect(160,100,340,380);
-  
-  //tape measure with hands
- 
-  image(bottomhand,0,500);
-  
+  rect(270,120,460,460);
+  }
 }
-  
